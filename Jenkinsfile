@@ -1,4 +1,4 @@
-pipeline:{
+pipeline {
     agent any
     
     stages{
@@ -8,7 +8,7 @@ pipeline:{
             }
         }
         stage('Building'){
-            step{
+            steps{
             bat 'docker build -t myapp:latest .'
         }
     }
